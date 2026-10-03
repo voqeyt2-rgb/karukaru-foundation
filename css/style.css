@@ -1,5 +1,13 @@
+/* =========================
+   GENERAL
+========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,15 +18,20 @@ body {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     background: #003b70;
+
     padding: 10px 35px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo-area {
@@ -30,30 +43,41 @@ body {
 .logo-area img {
     width: 40px !important;
     height: 40px !important;
+
     max-width: 40px !important;
     max-height: 40px !important;
+
     object-fit: contain;
 }
 
 .logo-area h2 {
     color: white;
+
     margin: 0;
+
     font-size: 19px;
 }
 
 .navbar ul {
     display: flex;
+    align-items: center;
+
     gap: 22px;
 
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
 
 .navbar a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -61,50 +85,76 @@ body {
 }
 
 
-/* HERO */
+/* =========================
+   HOMEPAGE HERO
+========================= */
 
 .hero {
-    min-height: 520px;
+    min-height: 600px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     text-align: center;
-    padding: 80px 20px;
 
-    background: linear-gradient(135deg,
-            #003b70,
-            #007a45);
+    padding: 100px 20px;
 
     color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 59, 112, 0.62),
+            rgba(0, 122, 69, 0.55)
+        ),
+        url("../images/home-hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 }
 
 .hero-content {
     max-width: 850px;
+
+    margin: auto;
 }
 
 .welcome {
     color: #f5b400;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
+    font-size: 16px;
 }
 
 .hero h1 {
     font-size: 52px;
+
     line-height: 1.15;
+
     margin: 20px 0;
 }
 
 .hero p:not(.welcome) {
     max-width: 700px;
+
     margin: auto;
+
     font-size: 18px;
+
     line-height: 1.7;
 }
 
 
-/* BUTTONS */
+/* =========================
+   HERO BUTTONS
+========================= */
 
 .hero-buttons {
     margin-top: 30px;
@@ -112,80 +162,107 @@ body {
 
 .btn {
     display: inline-block;
+
     padding: 13px 27px;
+
     border-radius: 6px;
 
     text-decoration: none;
+
     font-weight: bold;
 
     margin: 5px;
+
+    transition: 0.3s;
 }
 
 .primary-btn {
     background: #f5b400;
+
     color: #222;
 }
 
 .primary-btn:hover {
     background: white;
+
     color: #003b70;
 }
 
 .secondary-btn {
     border: 2px solid white;
+
     color: white;
 }
 
 .secondary-btn:hover {
     background: white;
+
     color: #003b70;
 }
 
 
-/* FOCUS SECTION */
+/* =========================
+   FOCUS SECTION
+========================= */
 
 .focus {
     padding: 70px 20px;
+
     text-align: center;
 }
 
 .section-label {
     color: #007a45;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .focus h2 {
     color: #003b70;
+
     font-size: 34px;
+
     margin: 10px 0;
 }
 
 .section-intro {
     max-width: 650px;
+
     margin: 0 auto 40px;
+
     color: #666;
+
     line-height: 1.6;
 }
 
 
+/* =========================
+   FOCUS CARDS
+========================= */
+
 .focus-container {
     max-width: 1100px;
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 22px;
 }
 
-
 .focus-card {
     background: white;
+
     padding: 30px 20px;
 
     border-radius: 12px;
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
 
     border-top: 4px solid #007a45;
 
@@ -194,6 +271,9 @@ body {
 
 .focus-card:hover {
     transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .icon {
@@ -206,14 +286,18 @@ body {
 
 .focus-card p {
     color: #666;
+
     line-height: 1.6;
 }
 
 
-/* CALL TO ACTION */
+/* =========================
+   CALL TO ACTION
+========================= */
 
 .cta {
     background: #007a45;
+
     color: white;
 
     text-align: center;
@@ -223,19 +307,24 @@ body {
 
 .cta h2 {
     font-size: 32px;
+
     margin-top: 0;
 }
 
 .cta p {
     line-height: 1.6;
+
     margin-bottom: 25px;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #003b70;
+
     color: white;
 
     text-align: center;
@@ -252,65 +341,111 @@ footer p {
 }
 
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 800px) {
 
     .navbar {
         flex-direction: column;
+
         gap: 15px;
+
         text-align: center;
     }
 
     .navbar ul {
         flex-wrap: wrap;
+
         justify-content: center;
+
         gap: 14px;
     }
 
+    .hero {
+        min-height: 550px;
+
+        padding: 80px 20px;
+
+        background-position: center;
+    }
+
     .hero h1 {
-        font-size: 38px;
+        font-size: 42px;
+    }
+
+    .focus-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo-area h2 {
+        font-size: 16px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 520px;
+
+        padding: 70px 20px;
+
+        background-position: center;
+    }
+
+    .welcome {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+
+        line-height: 1.2;
+    }
+
+    .hero p:not(.welcome) {
+        font-size: 16px;
+    }
+
+    .focus {
+        padding: 55px 20px;
+    }
+
+    .focus h2 {
+        font-size: 28px;
     }
 
     .focus-container {
         grid-template-columns: 1fr;
+
         max-width: 500px;
     }
-}
 
-/* MOBILE MENU BUTTON */
-
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* MOBILE NAVIGATION */
-
-@media (max-width: 800px) {
-
-    .menu-toggle {
-        display: block;
+    .cta {
+        padding: 50px 20px;
     }
 
-    .navbar {
-        position: relative;
+    .cta h2 {
+        font-size: 28px;
     }
 
-    .navbar ul {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        padding: 15px 0;
-    }
-
-    .navbar ul.active {
-        display: flex;
-    }
 }
