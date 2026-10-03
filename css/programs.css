@@ -9,14 +9,20 @@ body {
     color: #222;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     background: #003b70;
     padding: 10px 35px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo-area {
@@ -28,8 +34,10 @@ body {
 .logo-area img {
     width: 40px !important;
     height: 40px !important;
+
     max-width: 40px !important;
     max-height: 40px !important;
+
     object-fit: contain;
 }
 
@@ -41,88 +49,188 @@ body {
 
 .navbar ul {
     display: flex;
+    align-items: center;
+
     gap: 22px;
+
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
 
 .navbar a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .navbar a:hover {
     color: #f5b400;
 }
 
-/* PROGRAM HEADER */
+
+/* =========================
+   PROGRAM HERO
+========================= */
 
 .program-hero {
-    background: linear-gradient(135deg, #003b70, #007a45);
+    background: linear-gradient(
+        135deg,
+        #003b70,
+        #007a45
+    );
+
     color: white;
+
     text-align: center;
-    padding: 75px 20px;
+
+    padding: 90px 20px;
 }
 
 .program-hero p {
     color: #f5b400;
+
     font-weight: bold;
-    letter-spacing: 2px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
 }
 
 .program-hero h1 {
-    font-size: 45px;
-    margin: 10px 0;
+    font-size: 48px;
+
+    margin: 0 0 15px;
 }
 
 .program-hero span {
     font-size: 18px;
+
+    line-height: 1.7;
 }
 
-/* PROGRAM CARDS */
+
+/* =========================
+   PROGRAMS SECTION
+========================= */
 
 .programs {
     max-width: 1150px;
-    margin: 55px auto;
+
+    margin: 60px auto;
+
     padding: 0 20px;
 
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+
+    gap: 28px;
 }
+
+
+/* =========================
+   PROGRAM CARD
+========================= */
 
 .program-card {
     background: white;
-    padding: 30px;
-    border-radius: 14px;
+
+    padding: 32px 28px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5eaf0;
+
     border-top: 5px solid #007a45;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
 .program-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.13);
 }
 
-.program-icon {
-    font-size: 42px;
+
+/* =========================
+   SPORTS / PROGRAM IMAGE
+========================= */
+
+.program-image {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    display: block;
 }
+
+
+/* =========================
+   PROGRAM ICON
+========================= */
+
+.program-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eef7f2;
+
+    border-radius: 50%;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROGRAM TEXT
+========================= */
 
 .program-card h2 {
     color: #003b70;
+
     font-size: 21px;
+
+    line-height: 1.3;
+
+    margin-bottom: 14px;
 }
 
 .program-card p {
     color: #555;
+
     line-height: 1.7;
 }
 
 .program-card ul {
     padding-left: 20px;
+
     color: #555;
+
     line-height: 1.9;
 }
 
@@ -130,74 +238,142 @@ body {
     color: #f5b400;
 }
 
-/* CALL TO ACTION */
+
+/* =========================
+   CALL TO ACTION
+========================= */
 
 .program-cta {
     background: #007a45;
+
     color: white;
+
     text-align: center;
-    padding: 60px 20px;
+
+    padding: 70px 20px;
 }
 
 .program-cta h2 {
-    font-size: 30px;
+    font-size: 32px;
+
+    margin-top: 0;
+}
+
+.program-cta p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
 }
 
 .program-cta a {
     display: inline-block;
-    padding: 13px 28px;
+
     background: #f5b400;
+
     color: #222;
-    text-decoration: none;
-    font-weight: bold;
+
+    padding: 14px 30px;
+
     border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .program-cta a:hover {
     background: white;
+
     color: #003b70;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #003b70;
+
     color: white;
+
     text-align: center;
-    padding: 35px 20px;
+
+    padding: 38px 20px;
 }
 
 footer h2 {
     color: #f5b400;
+
     margin-bottom: 10px;
 }
 
 footer p {
     line-height: 1.6;
+
+    margin: 7px 0;
 }
 
-/* MOBILE */
 
-@media (max-width: 800px) {
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
 
     .navbar {
         flex-direction: column;
+
         gap: 15px;
+
         text-align: center;
     }
 
     .navbar ul {
         flex-wrap: wrap;
+
         justify-content: center;
+
         gap: 14px;
     }
 
     .programs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .programs {
         grid-template-columns: 1fr;
-        max-width: 550px;
+
+        max-width: 500px;
+    }
+
+    .program-hero {
+        padding: 65px 20px;
     }
 
     .program-hero h1 {
         font-size: 36px;
     }
+
+    .program-hero span {
+        font-size: 16px;
+    }
+
+    .program-image {
+        height: 210px;
+    }
+
 }
