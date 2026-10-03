@@ -1,5 +1,14 @@
+/* =========================
+   KARUKARU FOUNDATION
+   PROGRAMS PAGE
+========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -7,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f8fc;
     color: #222;
+    line-height: 1.6;
 }
 
 
@@ -16,19 +26,23 @@ body {
 
 .navbar {
     background: #003b70;
-    padding: 10px 35px;
+
+    padding: 10px 6%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    z-index: 20;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 10px;
 }
 
 .logo-area img {
@@ -43,15 +57,18 @@ body {
 
 .logo-area h2 {
     color: white;
+
     margin: 0;
+
     font-size: 19px;
 }
 
 .navbar ul {
     display: flex;
+
     align-items: center;
 
-    gap: 22px;
+    gap: 25px;
 
     list-style: none;
 
@@ -76,53 +93,119 @@ body {
 
 /* =========================
    PROGRAM HERO
+   BACKGROUND IMAGE
 ========================= */
 
 .program-hero {
-    background: linear-gradient(
-        135deg,
-        #003b70,
-        #007a45
-    );
+    min-height: 540px;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 59, 112, 0.90) 0%,
+            rgba(0, 59, 112, 0.68) 45%,
+            rgba(0, 59, 112, 0.30) 100%),
+        url("../images/programs-hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
 
     color: white;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     text-align: center;
 
-    padding: 90px 20px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Green and gold bottom */
+
+.program-hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+
+    bottom: -75px;
+
+    width: 110%;
+
+    height: 130px;
+
+    background: #007a45;
+
+    border-top: 7px solid #f5b400;
+
+    border-radius: 50% 50% 0 0;
+}
+
+
+/* Hero content */
+
+.program-hero-content {
+    max-width: 850px;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .program-hero p {
     color: #f5b400;
 
+    font-size: 15px;
+
     font-weight: bold;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 }
 
 .program-hero h1 {
-    font-size: 48px;
+    font-size: 56px;
 
-    margin: 0 0 15px;
+    line-height: 1.1;
+
+    margin: 0 0 20px;
+
+    font-weight: 800;
 }
 
 .program-hero span {
-    font-size: 18px;
+    display: block;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 19px;
 
     line-height: 1.7;
+
+    color: white;
 }
 
 
 /* =========================
-   PROGRAMS SECTION
+   PROGRAM CARDS
 ========================= */
 
 .programs {
     max-width: 1150px;
 
-    margin: 60px auto;
+    margin: 70px auto;
 
     padding: 0 20px;
 
@@ -132,11 +215,6 @@ body {
 
     gap: 28px;
 }
-
-
-/* =========================
-   PROGRAM CARD
-========================= */
 
 .program-card {
     background: white;
@@ -149,11 +227,10 @@ body {
 
     border-top: 5px solid #007a45;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
 
-    transition:
-        transform 0.3s,
-        box-shadow 0.3s;
+    transition: 0.3s;
 }
 
 .program-card:hover {
@@ -162,30 +239,6 @@ body {
     box-shadow:
         0 12px 30px rgba(0, 0, 0, 0.13);
 }
-
-
-/* =========================
-   SPORTS / PROGRAM IMAGE
-========================= */
-
-.program-image {
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 10px;
-
-    margin-bottom: 20px;
-
-    display: block;
-}
-
-
-/* =========================
-   PROGRAM ICON
-========================= */
 
 .program-icon {
     width: 65px;
@@ -205,11 +258,6 @@ body {
     margin-bottom: 20px;
 }
 
-
-/* =========================
-   PROGRAM TEXT
-========================= */
-
 .program-card h2 {
     color: #003b70;
 
@@ -217,7 +265,7 @@ body {
 
     line-height: 1.3;
 
-    margin-bottom: 14px;
+    margin: 0 0 14px;
 }
 
 .program-card p {
@@ -256,7 +304,7 @@ body {
 .program-cta h2 {
     font-size: 32px;
 
-    margin-top: 0;
+    margin: 0 0 12px;
 }
 
 .program-cta p {
@@ -264,7 +312,7 @@ body {
 
     line-height: 1.7;
 
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 }
 
 .program-cta a {
@@ -345,6 +393,9 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .program-hero h1 {
+        font-size: 46px;
+    }
 }
 
 
@@ -354,26 +405,53 @@ footer p {
 
 @media (max-width: 600px) {
 
-    .programs {
-        grid-template-columns: 1fr;
+    .navbar {
+        padding: 12px 20px;
+    }
 
-        max-width: 500px;
+    .logo-area h2 {
+        font-size: 16px;
     }
 
     .program-hero {
-        padding: 65px 20px;
+        min-height: 500px;
+
+        padding: 60px 20px 100px;
+
+        background-position: center;
     }
 
     .program-hero h1 {
-        font-size: 36px;
+        font-size: 38px;
+    }
+
+    .program-hero p {
+        font-size: 13px;
+
+        letter-spacing: 2px;
     }
 
     .program-hero span {
         font-size: 16px;
     }
 
-    .program-image {
-        height: 210px;
+    .programs {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        margin: 50px auto;
     }
 
+    .program-card {
+        padding: 27px 23px;
+    }
+
+    .program-cta {
+        padding: 60px 20px;
+    }
+
+    .program-cta h2 {
+        font-size: 28px;
+    }
 }
