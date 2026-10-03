@@ -1,7 +1,7 @@
-/* =========================
+/* =================================
    KARUKARU FOUNDATION
-   PROGRAMS PAGE
-========================= */
+   PROFESSIONAL PROGRAMS PAGE
+================================= */
 
 * {
     box-sizing: border-box;
@@ -16,39 +16,36 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f8fc;
     color: #222;
-    line-height: 1.6;
 }
 
 
-/* =========================
+/* =================================
    NAVIGATION
-========================= */
+================================= */
 
 .navbar {
     background: #003b70;
-
-    padding: 10px 6%;
+    padding: 10px 5%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
 
     position: relative;
-    z-index: 20;
+    z-index: 10;
 }
 
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
 }
 
 .logo-area img {
     width: 40px !important;
     height: 40px !important;
-
     max-width: 40px !important;
     max-height: 40px !important;
 
@@ -57,32 +54,24 @@ body {
 
 .logo-area h2 {
     color: white;
-
     margin: 0;
-
     font-size: 19px;
 }
 
 .navbar ul {
     display: flex;
-
     align-items: center;
-
-    gap: 25px;
+    gap: 24px;
 
     list-style: none;
-
     margin: 0;
     padding: 0;
 }
 
 .navbar a {
     color: white;
-
     text-decoration: none;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -91,121 +80,79 @@ body {
 }
 
 
-/* =========================
-   PROGRAM HERO
-   BACKGROUND IMAGE
-========================= */
+/* =================================
+   SHORT HERO
+================================= */
 
 .program-hero {
-    min-height: 540px;
+    min-height: 330px;
 
     background:
-        linear-gradient(90deg,
-            rgba(0, 59, 112, 0.90) 0%,
-            rgba(0, 59, 112, 0.68) 45%,
-            rgba(0, 59, 112, 0.30) 100%),
+        linear-gradient(
+            rgba(0, 59, 112, 0.78),
+            rgba(0, 122, 69, 0.72)
+        ),
         url("../images/programs-hero.jpg");
 
     background-size: cover;
-
     background-position: center;
 
-    color: white;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
+    color: white;
+
     position: relative;
 
-    overflow: hidden;
+    padding: 50px 20px;
 }
-
-
-/* Green and gold bottom */
-
-.program-hero::after {
-    content: "";
-
-    position: absolute;
-
-    left: -5%;
-
-    bottom: -75px;
-
-    width: 110%;
-
-    height: 130px;
-
-    background: #007a45;
-
-    border-top: 7px solid #f5b400;
-
-    border-radius: 50% 50% 0 0;
-}
-
-
-/* Hero content */
 
 .program-hero-content {
-    max-width: 850px;
-
-    padding: 40px 20px;
-
+    max-width: 750px;
     position: relative;
-
     z-index: 2;
 }
 
 .program-hero p {
     color: #f5b400;
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: bold;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 }
 
 .program-hero h1 {
-    font-size: 56px;
+    font-size: 48px;
+
+    margin: 0 0 12px;
 
     line-height: 1.1;
-
-    margin: 0 0 20px;
-
-    font-weight: 800;
 }
 
 .program-hero span {
+    font-size: 17px;
+
     display: block;
 
-    max-width: 700px;
-
-    margin: auto;
-
-    font-size: 19px;
-
-    line-height: 1.7;
-
-    color: white;
+    line-height: 1.5;
 }
 
 
-/* =========================
-   PROGRAM CARDS
-========================= */
+/* =================================
+   PROGRAM GRID
+================================= */
 
 .programs {
-    max-width: 1150px;
+    max-width: 1050px;
 
-    margin: 70px auto;
+    margin: 45px auto;
 
     padding: 0 20px;
 
@@ -213,36 +160,52 @@ body {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 28px;
+    gap: 20px;
 }
+
+
+/* =================================
+   SQUARE PROGRAM CARDS
+================================= */
 
 .program-card {
     background: white;
 
-    padding: 32px 28px;
+    min-height: 300px;
 
-    border-radius: 15px;
+    padding: 25px 22px;
 
-    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+
+    border: 1px solid #e2e8ef;
 
     border-top: 5px solid #007a45;
 
     box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
+        0 6px 18px rgba(0,0,0,0.07);
+
+    display: flex;
+
+    flex-direction: column;
 
     transition: 0.3s;
 }
 
 .program-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.13);
+        0 12px 25px rgba(0,0,0,0.12);
 }
 
+
+/* =================================
+   ICON
+================================= */
+
 .program-icon {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
 
     display: flex;
 
@@ -253,33 +216,51 @@ body {
 
     border-radius: 50%;
 
-    font-size: 34px;
+    font-size: 28px;
 
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
+
+
+/* =================================
+   CARD TEXT
+================================= */
 
 .program-card h2 {
     color: #003b70;
 
-    font-size: 21px;
+    font-size: 19px;
 
-    line-height: 1.3;
+    line-height: 1.25;
 
-    margin: 0 0 14px;
+    margin: 0 0 10px;
 }
 
 .program-card p {
     color: #555;
 
-    line-height: 1.7;
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin: 0 0 10px;
 }
 
+
+/* =================================
+   PROGRAM LIST
+================================= */
+
 .program-card ul {
-    padding-left: 20px;
+    padding-left: 18px;
+
+    margin: 5px 0 0;
 
     color: #555;
 
-    line-height: 1.9;
+    font-size: 13px;
+
+    line-height: 1.65;
 }
 
 .program-card li::marker {
@@ -287,32 +268,34 @@ body {
 }
 
 
-/* =========================
-   CALL TO ACTION
-========================= */
+/* =================================
+   CTA
+================================= */
 
 .program-cta {
-    background: #007a45;
+    background: linear-gradient(
+        135deg,
+        #007a45,
+        #003b70
+    );
 
     color: white;
 
     text-align: center;
 
-    padding: 70px 20px;
+    padding: 45px 20px;
 }
 
 .program-cta h2 {
-    font-size: 32px;
+    font-size: 28px;
 
-    margin: 0 0 12px;
+    margin: 0 0 8px;
 }
 
 .program-cta p {
-    font-size: 17px;
+    margin: 0 0 20px;
 
-    line-height: 1.7;
-
-    margin: 0 0 25px;
+    font-size: 15px;
 }
 
 .program-cta a {
@@ -322,7 +305,7 @@ body {
 
     color: #222;
 
-    padding: 14px 30px;
+    padding: 12px 25px;
 
     border-radius: 6px;
 
@@ -340,9 +323,9 @@ body {
 }
 
 
-/* =========================
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 footer {
     background: #003b70;
@@ -351,32 +334,34 @@ footer {
 
     text-align: center;
 
-    padding: 38px 20px;
+    padding: 28px 20px;
 }
 
 footer h2 {
     color: #f5b400;
 
-    margin-bottom: 10px;
+    font-size: 20px;
+
+    margin: 0 0 8px;
 }
 
 footer p {
-    line-height: 1.6;
+    margin: 5px 0;
 
-    margin: 7px 0;
+    font-size: 14px;
 }
 
 
-/* =========================
+/* =================================
    TABLET
-========================= */
+================================= */
 
 @media (max-width: 850px) {
 
     .navbar {
         flex-direction: column;
 
-        gap: 15px;
+        gap: 14px;
 
         text-align: center;
     }
@@ -391,22 +376,24 @@ footer p {
 
     .programs {
         grid-template-columns: repeat(2, 1fr);
+
+        max-width: 700px;
     }
 
-    .program-hero h1 {
-        font-size: 46px;
+    .program-card {
+        min-height: 290px;
     }
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =================================
+   PHONE
+================================= */
 
 @media (max-width: 600px) {
 
     .navbar {
-        padding: 12px 20px;
+        padding: 12px 15px;
     }
 
     .logo-area h2 {
@@ -414,44 +401,40 @@ footer p {
     }
 
     .program-hero {
-        min-height: 500px;
+        min-height: 280px;
 
-        padding: 60px 20px 100px;
-
-        background-position: center;
+        padding: 45px 20px;
     }
 
     .program-hero h1 {
-        font-size: 38px;
-    }
-
-    .program-hero p {
-        font-size: 13px;
-
-        letter-spacing: 2px;
+        font-size: 36px;
     }
 
     .program-hero span {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .programs {
         grid-template-columns: 1fr;
 
-        max-width: 500px;
+        max-width: 400px;
 
-        margin: 50px auto;
+        gap: 18px;
+
+        margin: 35px auto;
     }
 
     .program-card {
-        padding: 27px 23px;
+        min-height: auto;
+
+        padding: 24px 20px;
     }
 
     .program-cta {
-        padding: 60px 20px;
+        padding: 40px 20px;
     }
 
     .program-cta h2 {
-        font-size: 28px;
+        font-size: 25px;
     }
 }
