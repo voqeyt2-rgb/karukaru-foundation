@@ -340,5 +340,25 @@ footer p {
     .contact-info h2,
     .contact-form h2 {
         font-size: 26px;
-    }
+    }.success-message {
+    display: none;
+    background: #e8f7ef;
+    color: #007a45;
+    border: 1px solid #9ed8b8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-message[data-fs-active] {
+    display: block;
+}
+
+.error-message {
+    color: #c62828;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
 }
