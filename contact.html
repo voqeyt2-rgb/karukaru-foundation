@@ -12,8 +12,12 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header class="navbar">
+
         <div class="nav-container">
 
             <a href="index.html" class="logo">
@@ -22,18 +26,28 @@
             </a>
 
             <nav>
+
                 <a href="index.html">Home</a>
+
                 <a href="about.html">About Us</a>
+
                 <a href="programs.html">Programs</a>
+
                 <a href="projects.html">Projects</a>
+
                 <a href="contact.html" class="active">Contact</a>
+
             </nav>
 
         </div>
+
     </header>
 
 
-    <!-- CONTACT HERO -->
+    <!-- =========================
+         CONTACT HERO
+    ========================== -->
+
     <section class="contact-hero">
 
         <div class="hero-overlay">
@@ -52,22 +66,33 @@
     </section>
 
 
-    <!-- CONTACT SECTION -->
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
     <section class="contact-section">
 
         <div class="section-heading">
+
             <p>CONNECT WITH US</p>
+
             <h2>Let's Make a Difference Together</h2>
+
             <span>
                 Whether you want to support our programs, volunteer,
                 partner with us or simply learn more, we'd love to hear from you.
             </span>
+
         </div>
 
 
         <div class="contact-container">
 
-            <!-- CONTACT INFORMATION -->
+
+            <!-- =========================
+                 CONTACT INFORMATION
+            ========================== -->
+
             <div class="contact-info">
 
                 <h2>Get In Touch</h2>
@@ -80,46 +105,83 @@
 
 
                 <div class="info-box">
-                    <div class="info-icon">📧</div>
+
+                    <div class="info-icon">
+                        📧
+                    </div>
 
                     <div>
+
                         <h3>Email</h3>
-                        <p>karukarufoundation@gmail.com</p>
+
+                        <p>
+                            karukarufoundation@gmail.com
+                        </p>
+
                     </div>
+
                 </div>
 
 
                 <div class="info-box">
-                    <div class="info-icon">📍</div>
+
+                    <div class="info-icon">
+                        📍
+                    </div>
 
                     <div>
+
                         <h3>Location</h3>
-                        <p>Kenya</p>
+
+                        <p>
+                            Kenya
+                        </p>
+
                     </div>
+
                 </div>
 
 
                 <div class="info-box">
-                    <div class="info-icon">🤝</div>
+
+                    <div class="info-icon">
+                        🤝
+                    </div>
 
                     <div>
+
                         <h3>Get Involved</h3>
+
                         <p>
                             Volunteer, partner with us or support
                             our community initiatives.
                         </p>
+
                     </div>
+
                 </div>
 
+
+                <!-- SOCIAL MEDIA -->
 
                 <div class="social-box">
 
                     <h3>Follow Our Journey</h3>
 
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">Facebook</a>
-                        <a href="#" aria-label="Instagram">Instagram</a>
-                        <a href="#" aria-label="TikTok">TikTok</a>
+
+                        <a href="#" aria-label="Facebook">
+                            Facebook
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            Instagram
+                        </a>
+
+                        <a href="#" aria-label="TikTok">
+                            TikTok
+                        </a>
+
                     </div>
 
                 </div>
@@ -127,46 +189,80 @@
             </div>
 
 
-            <!-- CONTACT FORM -->
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
+
             <div class="contact-form">
 
                 <h2>Send Us a Message</h2>
 
-                <form action="https://formspree.io/f/xqpavzdl" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xqpavzdl" method="POST">
+
+                    <!-- NAME -->
 
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+
+                        <label for="name">
+                            Full Name
+                        </label>
 
                         <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
                     </div>
 
 
+                    <!-- EMAIL -->
+
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+
+                        <label for="email">
+                            Email Address
+                        </label>
 
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
                     </div>
 
 
+                    <!-- SUBJECT -->
+
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+
+                        <label for="subject">
+                            Subject
+                        </label>
 
                         <input type="text" id="subject" name="subject" placeholder="What is your message about?"
                             required>
+
                     </div>
 
 
+                    <!-- MESSAGE -->
+
                     <div class="form-group">
-                        <label for="message">Message</label>
+
+                        <label for="message">
+                            Message
+                        </label>
 
                         <textarea id="message" name="message" rows="7" placeholder="Write your message here..."
                             required></textarea>
+
                     </div>
 
 
-                    <button type="submit">
+                    <!-- SEND BUTTON -->
+
+                    <button type="submit" id="sendButton">
                         Send Message
                     </button>
+
+
+                    <!-- SUCCESS / ERROR MESSAGE -->
+
+                    <p id="successMessage" class="success-message"></p>
 
                 </form>
 
@@ -177,7 +273,10 @@
     </section>
 
 
-    <!-- CALL TO ACTION -->
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+
     <section class="contact-cta">
 
         <h2>Be Part of the Change</h2>
@@ -187,32 +286,55 @@
             and build a better future.
         </p>
 
-        <a href="programs.html">Explore Our Programs</a>
+        <a href="programs.html">
+            Explore Our Programs
+        </a>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
         <div class="footer-content">
 
             <div>
-                <h3>KARUKARU FOUNDATION</h3>
+
+                <h3>
+                    KARUKARU FOUNDATION
+                </h3>
 
                 <p>
                     Empowering Lives • Inspiring Talent • Building the Future
                 </p>
+
             </div>
 
 
             <div class="footer-links">
 
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="programs.html">Programs</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="programs.html">
+                    Programs
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </div>
 
@@ -229,6 +351,10 @@
 
     </footer>
 
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
 
