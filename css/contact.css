@@ -1,6 +1,6 @@
-/* ==============================
+/* =================================
    GENERAL
-============================== */
+================================= */
 
 * {
     margin: 0;
@@ -10,8 +10,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     color: #222;
+
     background: #f5f8fa;
+
     line-height: 1.6;
 }
 
@@ -20,54 +23,75 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    NAVIGATION
-============================== */
+================================= */
 
 .navbar {
     background: #063b5c;
+
     padding: 12px 5%;
+
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-container {
     max-width: 1200px;
+
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
 }
 
+
+/* LOGO */
+
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     color: white;
+
     font-weight: bold;
+
     font-size: 16px;
 }
 
 .logo img {
     width: 40px !important;
+
     height: 40px !important;
 
     object-fit: contain;
+
     display: block;
 }
 
+
+/* NAV LINKS */
+
 .nav-container nav {
     display: flex;
+
     align-items: center;
+
     gap: 25px;
 }
 
 .nav-container nav a {
     color: white;
+
     font-size: 15px;
+
     font-weight: 600;
 
     padding: 8px 4px;
@@ -81,22 +105,26 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    CONTACT HERO
-============================== */
+================================= */
 
 .contact-hero {
     min-height: 430px;
 
     background-image:
+
         linear-gradient(rgba(0, 55, 80, 0.62),
             rgba(0, 75, 60, 0.62)),
+
         url("../images/contact-hero.png");
 
     background-size: cover;
+
     background-position: center;
 
     display: flex;
+
     align-items: center;
 
     padding: 60px 8%;
@@ -112,6 +140,7 @@ a {
     color: #f5b400;
 
     font-size: 15px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -121,6 +150,7 @@ a {
 
 .hero-overlay h1 {
     font-size: 56px;
+
     line-height: 1.1;
 
     margin-bottom: 20px;
@@ -132,21 +162,27 @@ a {
     max-width: 580px;
 
     font-size: 19px;
+
     line-height: 1.7;
 }
 
 
-/* ==============================
+/* =================================
    CONTACT SECTION
-============================== */
+================================= */
 
 .contact-section {
     padding: 70px 6%;
+
     background: #f5f8fa;
 }
 
+
+/* SECTION HEADING */
+
 .section-heading {
     text-align: center;
+
     max-width: 750px;
 
     margin: 0 auto 50px;
@@ -156,6 +192,7 @@ a {
     color: #f5b400;
 
     font-size: 14px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -178,9 +215,9 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    CONTACT CONTAINER
-============================== */
+================================= */
 
 .contact-container {
     max-width: 1100px;
@@ -195,9 +232,9 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    CONTACT INFORMATION
-============================== */
+================================= */
 
 .contact-info {
     background: white;
@@ -206,7 +243,8 @@ a {
 
     border-radius: 16px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info h2 {
@@ -240,6 +278,7 @@ a {
 
 .info-icon {
     width: 45px;
+
     height: 45px;
 
     background: #e8f5ef;
@@ -247,7 +286,9 @@ a {
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-size: 21px;
@@ -270,9 +311,9 @@ a {
 }
 
 
-/* ==============================
-   SOCIAL LINKS
-============================== */
+/* =================================
+   SOCIAL MEDIA
+================================= */
 
 .social-box {
     margin-top: 30px;
@@ -313,9 +354,9 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    CONTACT FORM
-============================== */
+================================= */
 
 .contact-form {
     background: white;
@@ -324,7 +365,8 @@ a {
 
     border-radius: 16px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form h2 {
@@ -334,6 +376,9 @@ a {
 
     margin-bottom: 25px;
 }
+
+
+/* FORM GROUP */
 
 .form-group {
     margin-bottom: 20px;
@@ -350,6 +395,9 @@ a {
 
     margin-bottom: 7px;
 }
+
+
+/* INPUTS */
 
 .form-group input,
 .form-group textarea {
@@ -376,7 +424,8 @@ a {
 .form-group textarea:focus {
     border-color: #0b8f6a;
 
-    box-shadow: 0 0 0 3px rgba(11, 143, 106, 0.1);
+    box-shadow:
+        0 0 0 3px rgba(11, 143, 106, 0.1);
 
     background: white;
 }
@@ -386,6 +435,9 @@ a {
 
     min-height: 150px;
 }
+
+
+/* SEND BUTTON */
 
 .contact-form button {
     width: 100%;
@@ -416,14 +468,53 @@ a {
 }
 
 
-/* ==============================
+/* =================================
+   SUCCESS MESSAGE
+================================= */
+
+.success-message {
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 14px 16px;
+
+    background: #e8f7ef;
+
+    color: #087443;
+
+    border-left: 4px solid #0b8f6a;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.success-message.show {
+    display: block;
+}
+
+
+/* DISABLED BUTTON */
+
+.contact-form button:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+
+/* =================================
    CALL TO ACTION
-============================== */
+================================= */
 
 .contact-cta {
     text-align: center;
 
-    background: linear-gradient(135deg,
+    background:
+        linear-gradient(135deg,
             #063b5c,
             #0b8f6a);
 
@@ -467,9 +558,9 @@ a {
 }
 
 
-/* ==============================
+/* =================================
    FOOTER
-============================== */
+================================= */
 
 footer {
     background: #032b43;
@@ -503,6 +594,9 @@ footer {
     font-size: 14px;
 }
 
+
+/* FOOTER LINKS */
+
 .footer-links {
     display: flex;
 
@@ -523,6 +617,9 @@ footer {
     color: #f5b400;
 }
 
+
+/* FOOTER BOTTOM */
+
 .footer-bottom {
     max-width: 1100px;
 
@@ -530,7 +627,8 @@ footer {
 
     padding-top: 20px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top:
+        1px solid rgba(255, 255, 255, 0.15);
 
     text-align: center;
 }
@@ -542,9 +640,9 @@ footer {
 }
 
 
-/* ==============================
+/* =================================
    TABLET
-============================== */
+================================= */
 
 @media (max-width: 850px) {
 
@@ -573,9 +671,9 @@ footer {
 }
 
 
-/* ==============================
+/* =================================
    MOBILE
-============================== */
+================================= */
 
 @media (max-width: 600px) {
 
