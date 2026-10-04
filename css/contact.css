@@ -1,364 +1,653 @@
+/* ==============================
+   GENERAL
+============================== */
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f8fc;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
+    background: #f5f8fa;
     line-height: 1.6;
 }
 
-/* =========================
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
    NAVIGATION
-========================= */
+============================== */
 
 .navbar {
-    background: #003b70;
-    padding: 10px 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: #063b5c;
+    padding: 12px 5%;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
-.logo-area {
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.logo-area img {
+.logo img {
     width: 40px !important;
     height: 40px !important;
-    max-width: 40px !important;
-    max-height: 40px !important;
+
     object-fit: contain;
+    display: block;
 }
 
-.logo-area h2 {
-    color: white;
-    margin: 0;
-    font-size: 19px;
-}
-
-.navbar ul {
+.nav-container nav {
     display: flex;
+    align-items: center;
     gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar a {
+.nav-container nav a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 4px;
+
     transition: 0.3s;
 }
 
-.navbar a:hover {
+.nav-container nav a:hover,
+.nav-container nav a.active {
     color: #f5b400;
 }
 
-/* =========================
-   HERO
-========================= */
+
+/* ==============================
+   CONTACT HERO
+============================== */
 
 .contact-hero {
-    background: linear-gradient(135deg, #003b70, #007a45);
+    min-height: 430px;
+
+    background-image:
+        linear-gradient(rgba(0, 55, 80, 0.62),
+            rgba(0, 75, 60, 0.62)),
+        url("../images/contact-hero.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
     color: white;
-    text-align: center;
-    padding: 90px 20px;
 }
 
-.contact-hero p {
+.hero-overlay {
+    max-width: 650px;
+}
+
+.hero-overlay p {
     color: #f5b400;
-    font-size: 14px;
+
+    font-size: 15px;
     font-weight: bold;
-    letter-spacing: 4px;
-    margin: 0 0 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
 }
 
-.contact-hero h1 {
-    font-size: 50px;
-    margin: 0 0 15px;
+.hero-overlay h1 {
+    font-size: 56px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
 }
 
-.contact-hero span {
+.hero-overlay span {
     display: block;
-    max-width: 700px;
-    margin: auto;
-    font-size: 18px;
+
+    max-width: 580px;
+
+    font-size: 19px;
+    line-height: 1.7;
 }
 
-/* =========================
+
+/* ==============================
    CONTACT SECTION
-========================= */
+============================== */
 
 .contact-section {
+    padding: 70px 6%;
+    background: #f5f8fa;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+.section-heading p {
+    color: #f5b400;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    color: #063b5c;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading span {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* ==============================
+   CONTACT CONTAINER
+============================== */
+
+.contact-container {
     max-width: 1100px;
-    margin: 70px auto;
-    padding: 0 20px;
+
+    margin: auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 40px;
 }
 
-/* CONTACT INFORMATION */
+
+/* ==============================
+   CONTACT INFORMATION
+============================== */
 
 .contact-info {
     background: white;
+
     padding: 35px;
+
     border-radius: 16px;
-    border-top: 5px solid #007a45;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info h2 {
-    color: #003b70;
-    font-size: 30px;
-    margin-top: 0;
+    color: #063b5c;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
 }
 
 .contact-info>p {
-    color: #555;
-    line-height: 1.7;
+    color: #666;
+
     margin-bottom: 30px;
 }
 
-/* CONTACT ITEMS */
 
-.contact-item {
+/* INFO BOX */
+
+.info-box {
     display: flex;
-    align-items: center;
-    gap: 18px;
-    margin: 25px 0;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.contact-icon {
-    width: 50px;
-    height: 50px;
+.info-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #e8f5ef;
+
+    border-radius: 50%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #eef7f2;
-    border-radius: 50%;
+    font-size: 21px;
 
-    font-size: 24px;
+    flex-shrink: 0;
 }
 
-.contact-item h3 {
-    color: #003b70;
-    margin: 0;
+.info-box h3 {
+    color: #063b5c;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
 }
 
-.contact-item p {
-    color: #555;
-    margin: 3px 0 0;
+.info-box p {
+    color: #666;
+
+    font-size: 15px;
 }
 
-/* =========================
+
+/* ==============================
+   SOCIAL LINKS
+============================== */
+
+.social-box {
+    margin-top: 30px;
+}
+
+.social-box h3 {
+    color: #063b5c;
+
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.social-links a {
+    background: #063b5c;
+
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #f5b400;
+
+    color: #063b5c;
+}
+
+
+/* ==============================
    CONTACT FORM
-========================= */
+============================== */
 
 .contact-form {
     background: white;
+
     padding: 35px;
+
     border-radius: 16px;
-    border-top: 5px solid #f5b400;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form h2 {
-    color: #003b70;
-    font-size: 30px;
-    margin-top: 0;
+    color: #063b5c;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
 }
 
-.contact-form label {
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
     display: block;
-    color: #003b70;
-    font-weight: bold;
-    margin: 16px 0 7px;
+
+    color: #333;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 13px 15px;
 
-    border: 1px solid #d8dee6;
-    border-radius: 7px;
+    border: 1px solid #d6dfe4;
 
-    font-family: Arial, sans-serif;
+    border-radius: 8px;
+
+    padding: 13px 14px;
+
+    font-family: inherit;
+
     font-size: 15px;
 
     outline: none;
+
     transition: 0.3s;
+
+    background: #fafcfd;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #007a45;
-    box-shadow: 0 0 0 3px rgba(0, 122, 69, 0.1);
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0b8f6a;
+
+    box-shadow: 0 0 0 3px rgba(11, 143, 106, 0.1);
+
+    background: white;
 }
 
-.contact-form textarea {
+.form-group textarea {
     resize: vertical;
-}
 
-/* BUTTON */
+    min-height: 150px;
+}
 
 .contact-form button {
     width: 100%;
-    margin-top: 22px;
-    padding: 14px;
 
     border: none;
-    border-radius: 7px;
 
-    background: #007a45;
+    border-radius: 8px;
+
+    padding: 14px;
+
+    background: #063b5c;
+
     color: white;
 
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
 .contact-form button:hover {
-    background: #003b70;
+    background: #0b8f6a;
+
     transform: translateY(-2px);
 }
 
-/* =========================
-   CTA
-========================= */
+
+/* ==============================
+   CALL TO ACTION
+============================== */
 
 .contact-cta {
-    background: #007a45;
-    color: white;
     text-align: center;
-    padding: 70px 20px;
+
+    background: linear-gradient(135deg,
+            #063b5c,
+            #0b8f6a);
+
+    color: white;
+
+    padding: 65px 20px;
 }
 
 .contact-cta h2 {
     font-size: 34px;
-    margin: 0 0 10px;
+
+    margin-bottom: 12px;
 }
 
 .contact-cta p {
     font-size: 17px;
-    margin: 0;
+
+    margin-bottom: 25px;
 }
 
-/* =========================
+.contact-cta a {
+    display: inline-block;
+
+    background: #f5b400;
+
+    color: #063b5c;
+
+    font-weight: bold;
+
+    padding: 12px 24px;
+
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.contact-cta a:hover {
+    background: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
    FOOTER
-========================= */
+============================== */
 
 footer {
-    background: #003b70;
+    background: #032b43;
+
     color: white;
-    text-align: center;
-    padding: 42px 20px;
+
+    padding: 40px 6% 20px;
 }
 
-footer h2 {
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.footer-content h3 {
+    margin-bottom: 8px;
+}
+
+.footer-content p {
+    color: #c9d5dc;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #c9d5dc;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
     color: #f5b400;
-    margin: 0 0 10px;
 }
 
-footer p {
-    margin: 7px 0;
+.footer-bottom {
+    max-width: 1100px;
+
+    margin: 30px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
 }
 
-/* =========================
+.footer-bottom p {
+    color: #aebdc6;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
    TABLET
-========================= */
+============================== */
 
 @media (max-width: 850px) {
 
-    .navbar {
+    .nav-container {
         flex-direction: column;
-        gap: 18px;
-        text-align: center;
     }
 
-    .navbar ul {
-        flex-wrap: wrap;
+    .nav-container nav {
         justify-content: center;
+
+        flex-wrap: wrap;
+
         gap: 15px;
     }
 
-    .contact-section {
+    .contact-container {
         grid-template-columns: 1fr;
-        max-width: 650px;
     }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
 }
 
-/* =========================
+
+/* ==============================
    MOBILE
-========================= */
+============================== */
 
 @media (max-width: 600px) {
 
-    .logo-area h2 {
-        font-size: 16px;
+    .navbar {
+        padding: 12px 4%;
     }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-container nav {
+        gap: 10px;
+    }
+
+    .nav-container nav a {
+        font-size: 13px;
+    }
+
 
     .contact-hero {
-        padding: 70px 20px;
+        min-height: 360px;
+
+        padding: 45px 25px;
+
+        background-position: center;
     }
 
-    .contact-hero h1 {
-        font-size: 38px;
+    .hero-overlay h1 {
+        font-size: 40px;
     }
 
-    .contact-hero span {
+    .hero-overlay span {
         font-size: 16px;
     }
 
+
     .contact-section {
-        margin: 45px auto;
+        padding: 50px 5%;
     }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading span {
+        font-size: 15px;
+    }
+
 
     .contact-info,
     .contact-form {
-        padding: 25px;
+        padding: 25px 20px;
     }
 
     .contact-info h2,
     .contact-form h2 {
-        font-size: 26px;
-    }.success-message {
-    display: none;
-    background: #e8f7ef;
-    color: #007a45;
-    border: 1px solid #9ed8b8;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-}
+        font-size: 24px;
+    }
 
-.success-message[data-fs-active] {
-    display: block;
-}
 
-.error-message {
-    color: #c62828;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
+    .contact-cta {
+        padding: 50px 20px;
+    }
+
+    .contact-cta h2 {
+        font-size: 28px;
+    }
+
+
+    .footer-links {
+        justify-content: center;
+    }
+
 }
