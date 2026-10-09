@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Support Us | KARUKARU FOUNDATION</title>
+
+    <link rel="stylesheet" href="css/support.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="KARUKARU FOUNDATION logo">
+            <span>KARUKARU FOUNDATION</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programs.html">Programs</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="support.html" class="active">Support Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/support-hero.jpg"
+                alt="KARUKARU FOUNDATION — supporting sports, technology, education and vulnerable families">
+        </section>
+
+        <section class="support-section">
+            <h2>Choose How to Support Us</h2>
+            <p class="intro">
+                Select a payment method and enter the amount you plan to contribute.
+            </p>
+
+            <div class="payment-grid">
+
+                <!-- M-PESA OPTION -->
+                <div class="payment-card mpesa-card">
+                    <div class="payment-icon">M</div>
+                    <h3>M-PESA Pochi la Biashara</h3>
+                    <p>Support our community initiatives using M-PESA.</p>
+
+                    <label for="mpesaAmount">Amount (KSh)</label>
+                    <input type="number" id="mpesaAmount" min="1" step="1" placeholder="Enter amount">
+
+                    <button type="button" onclick="showMpesaInstructions()">
+                        Continue with M-PESA
+                    </button>
+
+                    <div id="mpesaInstructions" class="instructions" hidden>
+                        <h4>Payment instructions</h4>
+                        <p><strong>Pochi phone number:</strong> 0111409343</p>
+                        <p>
+                            Open the official M-PESA menu on your phone and
+                            follow the available Pochi la Biashara payment steps.
+                        </p>
+                        <p>
+                            Enter the amount you selected and confirm the
+                            recipient before completing payment.
+                        </p>
+                        <p class="security-note">
+                            Your M-PESA PIN must only be entered in the official
+                            M-PESA prompt, never on this website.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BANK OPTION -->
+                <div class="payment-card bank-card">
+                    <div class="payment-icon">KCB</div>
+                    <h3>Bank Transfer</h3>
+                    <p>Support us through a bank transfer.</p>
+
+                    <label for="bankAmount">Amount (KSh)</label>
+                    <input type="number" id="bankAmount" min="1" step="1" placeholder="Enter amount">
+
+                    <button type="button" onclick="showBankInstructions()">
+                        View Bank Details
+                    </button>
+
+                    <div id="bankInstructions" class="instructions" hidden>
+                        <h4>Bank payment details</h4>
+                        <p><strong>Bank:</strong> KCB Bank</p>
+                        <p><strong>Account name:</strong> Kelvin Mutembei</p>
+                        <p><strong>Account number:</strong> 1345150490</p>
+                        <p>
+                            <strong>Your planned contribution:</strong>
+                            KSh <span id="displayBankAmount">0</span>
+                        </p>
+                        <p>
+                            Verify the account details with the account holder
+                            before making a transfer.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="notice">
+                <strong>Please note:</strong> This page currently displays
+                payment instructions only. It does not process payments or
+                automatically send an M-PESA prompt.
+            </p>
+
+            <p class="notice">
+                KARUKARU FOUNDATION is being developed as a community initiative.
+
+            </p>
+
+            <div class="contact-box">
+                <h3>Need help?</h3>
+                <p>Contact us if you have questions about supporting our work.</p>
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> KARUKARU FOUNDATION.
+            All rights reserved.
+        </p>
+        <p>Empowering Lives • Inspiring Talent • Building the Future</p>
+    </footer>
+
+    <script>
+        function showMpesaInstructions() {
+            const amount = Number(document.getElementById("mpesaAmount").value);
+
+            if (!Number.isInteger(amount) || amount < 1) {
+                alert("Please enter a valid amount in KSh.");
+                return;
+            }
+
+            document.getElementById("mpesaInstructions").hidden = false;
+        }
+
+        function showBankInstructions() {
+            const amount = Number(document.getElementById("bankAmount").value);
+
+            if (!Number.isInteger(amount) || amount < 1) {
+                alert("Please enter a valid amount in KSh.");
+                return;
+            }
+
+            document.getElementById("displayBankAmount").textContent =
+                amount.toLocaleString("en-KE");
+
+            document.getElementById("bankInstructions").hidden = false;
+        }
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

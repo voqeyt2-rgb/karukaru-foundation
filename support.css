@@ -1,0 +1,523 @@
+/* =========================================
+   KARUKARU FOUNDATION - SUPPORT PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #073b73;
+    --dark-blue: #062d56;
+    --green: #168447;
+    --dark-green: #086044;
+    --gold: #f2b632;
+    --light: #f4f8fc;
+    --white: #ffffff;
+    --text: #263445;
+    --muted: #586779;
+    --border: #dce5ee;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 14px 5%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.brand img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.navbar nav a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--green);
+}
+
+/* =========================================
+   SUPPORT HERO IMAGE
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #e9f5f4;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    color: var(--blue);
+}
+
+/* The image contains its own text and branding. */
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+
+/* Optional hero text if your HTML uses it */
+
+.hero .eyebrow {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    color: var(--blue);
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* =========================================
+   SUPPORT SECTION
+========================================= */
+
+.support-section {
+    width: min(1100px, 90%);
+    margin: 55px auto;
+}
+
+.support-section h2 {
+    color: var(--blue);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* =========================================
+   PAYMENT CARDS
+========================================= */
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.payment-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 14px;
+    border-top: 5px solid var(--green);
+    box-shadow: 0 6px 24px rgba(7, 59, 115, 0.08);
+    transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(7, 59, 115, 0.13);
+}
+
+.bank-card {
+    border-top-color: var(--blue);
+}
+
+.payment-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background: #e7f5eb;
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.bank-card .payment-icon {
+    background: #e8eff9;
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.payment-card h3 {
+    color: var(--blue);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.payment-card>p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+/* =========================================
+   AMOUNT INPUTS
+========================================= */
+
+.payment-card label {
+    display: block;
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.payment-card input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.payment-card input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(22, 132, 71, 0.12);
+}
+
+/* =========================================
+   PAYMENT BUTTONS
+========================================= */
+
+.payment-card button {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.payment-card button:hover {
+    background: var(--dark-green);
+}
+
+.bank-card button {
+    background: var(--blue);
+}
+
+.bank-card button:hover {
+    background: var(--dark-blue);
+}
+
+/* =========================================
+   PAYMENT INSTRUCTIONS
+========================================= */
+
+.instructions {
+    margin-top: 22px;
+    padding: 20px;
+    background: #f1f7fb;
+    border: 1px solid #e0eaf3;
+    border-radius: 9px;
+    overflow-wrap: anywhere;
+}
+
+.instructions[hidden] {
+    display: none;
+}
+
+.instructions h4 {
+    color: var(--blue);
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.instructions p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.instructions p:last-child {
+    margin-bottom: 0;
+}
+
+.security-note {
+    color: #8a3d16;
+    font-weight: 700;
+}
+
+/* =========================================
+   IMPORTANT NOTICES
+========================================= */
+
+.notice {
+    margin: 25px auto;
+    padding: 18px 20px;
+    background: #fff8e7;
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    color: #4f4635;
+    font-size: 14px;
+}
+
+/* =========================================
+   CONTACT BOX
+========================================= */
+
+.contact-box {
+    background: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(7, 59, 115, 0.06);
+}
+
+.contact-box h3 {
+    color: var(--blue);
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    min-width: 150px;
+    padding: 13px 22px;
+    background: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: background 0.25s ease;
+}
+
+.contact-button:hover {
+    background: var(--dark-green);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 26px 15px;
+    font-size: 13px;
+}
+
+footer p+p {
+    margin-top: 6px;
+    color: #d7e5f3;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        gap: 13px;
+    }
+
+    .payment-card {
+        padding: 24px;
+    }
+
+    .hero img {
+        max-height: 500px;
+    }
+}
+
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 13px 4%;
+        gap: 13px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        gap: 10px 14px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero img {
+        width: 100%;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .support-section {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .support-section h2 {
+        font-size: 25px;
+    }
+
+    .intro {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .payment-card {
+        padding: 22px;
+    }
+
+    .payment-card h3 {
+        font-size: 20px;
+    }
+
+    .notice {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .contact-box {
+        padding: 27px 16px;
+    }
+
+    footer {
+        padding: 23px 12px;
+    }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+    .navbar nav {
+        gap: 9px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .payment-card {
+        padding: 18px;
+    }
+}
